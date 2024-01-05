@@ -6,6 +6,15 @@ const nextConfig = {
       pure: true,
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/feed",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

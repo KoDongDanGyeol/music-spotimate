@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import RecoilProvider from "@/components/config/RecoilProvider"
 import StyledProvider from "@/components/config/StyledProvider"
+import LayoutProvider from "@/components/config/LayoutProvider"
 import notoSansKr from "@/styles/font/notoSansKr"
 import "@/styles/reset.css"
 
@@ -40,7 +41,9 @@ const RootLayout = (props: RootLayoutProps) => {
       </head>
       <body>
         <RecoilProvider flag={false}>
-          <StyledProvider>{children}</StyledProvider>
+          <StyledProvider>
+            <LayoutProvider>{children}</LayoutProvider>
+          </StyledProvider>
         </RecoilProvider>
       </body>
     </html>
