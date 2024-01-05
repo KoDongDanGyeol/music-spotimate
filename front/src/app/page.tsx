@@ -3,6 +3,7 @@
 import { useRecoilState } from "recoil"
 import { atomFlag } from "@/stores/flag"
 import useMount from "@/libs/hook/useMount"
+import useTheme from "@/libs/hook/useTheme"
 // import Jam from "@/components/display/Jam"
 
 const Page = () => {
@@ -16,6 +17,10 @@ const Page = () => {
       console.log("unmount")
     }
   })
+  const {
+    themeStructure: { isPressedTheme, theme },
+    toggleTheme,
+  } = useTheme()
 
   return (
     <main>
@@ -24,6 +29,14 @@ const Page = () => {
           <span>Recoil atomFlag</span>
           <button type="button" onClick={() => setFlag((value) => !value)}>
             {flag.toString()}
+          </button>
+        </section>
+      )}
+      {isMounted && (
+        <section>
+          <span>Recoil atomTheme ({isPressedTheme ? "pressed" : "not pressed"})</span>
+          <button type="button" onClick={() => toggleTheme()}>
+            {theme.toString()}
           </button>
         </section>
       )}
