@@ -6,7 +6,7 @@ const Page = () => {
   return (
     <>
       <Document layout="overview">
-        <Document.Headline>Guide</Document.Headline>
+        <Document.Headline>General</Document.Headline>
       </Document>
     </>
   )

@@ -29,3 +29,8 @@ export const isEqualsInternal = (arr1: unknown[], arr2: unknown[]): boolean => {
     return isEqualsInternal(element, arr2[index] as unknown[])
   })
 }
+
+export const toPascal = (value: string) => {
+  const capitalizedWords = value.split(/[-\s]/).map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+  return capitalizedWords.join("")
+}
