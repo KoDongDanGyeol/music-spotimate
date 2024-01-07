@@ -224,6 +224,10 @@ const StyledGlobal = styled.createGlobalStyle`
     }
   }
 
+  body.header-opened {
+    overflow: hidden;
+  }
+
   .sr-only {
     position: absolute;
     margin: -1px;
