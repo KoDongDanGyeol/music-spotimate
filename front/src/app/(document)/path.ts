@@ -13,8 +13,8 @@ export const Path: PathItem[] = [
         leaf: [{ name: "form-hoc" }, { name: "helper" }, { name: "input" }, { name: "label" }, { name: "textarea" }],
       },
       {
-        name: "form",
-        leaf: [{ name: "form-hoc-guide" }],
+        name: "display",
+        leaf: [{ name: "picture" }, { name: "avatar" }],
       },
     ],
   },

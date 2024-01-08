@@ -1,5 +1,7 @@
 export const IconName = {
   ["BarsBottomRight"]: "BarsBottomRight",
+  ["Photo"]: "Photo",
+  ["UserCircle"]: "UserCircle",
   ["XMark"]: "XMark",
 } as const
 

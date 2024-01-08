@@ -1,3 +1,5 @@
+import { Children, isValidElement } from "react"
+
 export type Nullable<T> = T | null | undefined
 
 export type NonNullable<T> = T extends null | undefined ? never : T
@@ -33,4 +35,12 @@ export const isEqualsInternal = (arr1: unknown[], arr2: unknown[]): boolean => {
 export const toPascal = (value: string) => {
   const capitalizedWords = value.split(/[-\s]/).map((word) => word.charAt(0).toUpperCase() + word.slice(1))
   return capitalizedWords.join("")
+}
+
+export const getChildProps = <T extends React.FC<P>, P>(child: React.ReactNode, type: T): P | null => {
+  for (const node of Children.toArray(child)) {
+    if (!isValidElement(node)) continue
+    return node.type === type ? { ...node.props } : getChildProps(node.props.children, type)
+  }
+  return null
 }
