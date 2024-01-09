@@ -143,12 +143,10 @@ const StyledGlobal = styled.createGlobalStyle`
   }
 
   a {
-    display: inline-block;
     color: hsl(var(--color-gray800));
     text-decoration: none;
   }
   button {
-    display: inline-block;
     padding: 0;
     font-size: ${(props) => props.theme.typo.size.base};
     line-height: ${(props) => props.theme.typo.leading.base};
@@ -230,7 +228,7 @@ const StyledGlobal = styled.createGlobalStyle`
 
   .sr-only {
     position: absolute;
-    margin: -1px;
+    /* margin: -1px; */
     padding: 0;
     width: 1px;
     height: 1px;

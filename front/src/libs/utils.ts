@@ -14,6 +14,10 @@ export type ObjectKeys<T extends object> = Array<keyof T>
 
 export type ObjectValues<T extends object> = Array<T[keyof T]>
 
+export const regexHashtag = /(#[^\s#]+)/gi
+
+export const regexUrl = /https?:\/\/[^\s]+/gi
+
 export const isContains = <T extends string>(list: ReadonlyArray<T>, value: string): value is T => {
   return list.some((item) => item === value)
 }

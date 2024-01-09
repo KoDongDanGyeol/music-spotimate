@@ -14,7 +14,7 @@ export const Path: PathItem[] = [
       },
       {
         name: "display",
-        leaf: [{ name: "picture" }, { name: "avatar" }],
+        leaf: [{ name: "picture" }, { name: "avatar" }, { name: "feed" }],
       },
     ],
   },
